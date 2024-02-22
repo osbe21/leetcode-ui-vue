@@ -4,8 +4,8 @@ import { ref } from 'vue';
 const props = defineProps(["direction"]);
 
 const container = ref(null);
-const slot1 = ref(null);
-const slot2 = ref(null);
+
+const percent = ref(0.5);
 
 let isResizing = false;
 
@@ -17,10 +17,7 @@ document.addEventListener('mousemove', ev => {
         const a = props.direction == 'column' ? rect.top : rect.left;
         const b = props.direction == 'column' ? rect.bottom : rect.right;
         
-        const percent = Math.max(Math.min((v - a) / (b - a), 1), 0);
-
-        slot1.value.style['flex-grow'] = percent;
-        slot2.value.style['flex-grow'] = 1 - percent;
+        percent.value = Math.max(Math.min((v - a) / (b - a), 1), 0);
     }
 })
 
@@ -30,13 +27,13 @@ document.addEventListener('mouseup', _ => isResizing = false)
 
 <template>
     <div ref="container" id="container">
-        <div ref="slot1" class="card">
+        <div id="slot1" class="card">
             <slot name="1"></slot>
         </div>
 
         <div @mousedown="isResizing=true" id="separator"></div>
 
-        <div ref="slot2" class="card">
+        <div id="slot2" class="card">
             <slot name="2"></slot>
         </div>
     </div>
@@ -88,5 +85,13 @@ document.addEventListener('mouseup', _ => isResizing = false)
     height: 100%;
 
     flex: 1 1 0;
+}
+
+#slot1 {
+    flex-grow: v-bind('percent');
+}
+
+#slot2 {
+    flex-grow: v-bind('1 - percent');
 }
 </style>

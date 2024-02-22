@@ -6,7 +6,7 @@
 <div id="container">
     <div id="buttons">
         <button>
-            <i class="fa-solid fa-bug" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-bug" style="color: #FFA116;"></i>
         </button>
         <button>
             <i class="fa-solid fa-play" style="color: #A7A7A7;"></i>

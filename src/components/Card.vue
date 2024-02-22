@@ -16,6 +16,9 @@
 
 <style scoped>
 #container {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     height: 100%;
 
@@ -27,6 +30,8 @@
 }
 
 #tab {
+    flex: 0 0 auto;
+
     display: flex;
     align-items: center;
     gap: 6px;
@@ -39,5 +44,12 @@
     
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+#content {
+    flex: 1 1 0;
+    
+    width: 100%;
+    height: 100%;
 }
 </style>

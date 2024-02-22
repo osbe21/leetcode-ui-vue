@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.vue';
 import CardContainer from './components/CardContainer.vue';
 import Card from './components/Card.vue'
 import DescriptionCard from './components/DescriptionCard.vue';
+import CodeCard from './components/CodeCard.vue';
 
 </script>
 
@@ -21,14 +22,7 @@ import DescriptionCard from './components/DescriptionCard.vue';
 			<CardContainer direction="column">
 				
 				<template #1>
-					<Card>
-						<template #icon>
-							<i class="fa-solid fa-code" style="color: #20b138;"></i>
-						</template>
-						<template #title>
-							<span>Code</span>
-						</template>
-					</Card>
+					<CodeCard />
 				</template>
 				
 				<template #2>
