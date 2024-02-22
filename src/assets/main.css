@@ -1,5 +1,10 @@
 body {
     margin: 0;
+
+    background-color: #0f0f0f;
+
+    color: #F5F5F5;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 }
 
 #app {

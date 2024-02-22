@@ -50,20 +50,37 @@ document.addEventListener('mouseup', _ => isResizing = false)
     display: flex;
     flex-direction: v-bind('props.direction || "row"');
     align-items: stretch;
-    gap: 5px;
 
     flex: 1 1 auto;
-
-
-    background-color: aquamarine;
 }
 
 #separator {
-    flex: 0 0 20px;
+    flex: 0 0 8px;
+
+    display: flex;
+    flex-direction: v-bind('props.direction == "column" ? "row" : "column"');
+    justify-content: center;
+    align-items: center;
 
     cursor: v-bind('(props.direction == "column" ? "ns" : "ew") + "-resize"');
+}
 
-    background-color: gray;
+#separator::after {
+    content: '';
+    display: inline-block;
+
+    width: 2px;
+    height: 2px;
+    flex-basis: 20px;
+
+    border-radius: 1px;
+    background-color: #313131;
+}
+
+#separator:hover::after {
+    flex-basis: 100%;
+
+    background-color: #1A90FF;
 }
 
 .card {
