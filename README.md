@@ -1,3 +1,3 @@
-Dette er en reupload av et tidligere prosjekt.
+# Leetcode UI
 
-Målet med prosjektet var å gjenskape layouten og roughly utseendet på LeetCode UI-en, for å lære the basics av Vue.
+Målet med dette prosjektet har vært å gjenskape layouten og roughly utseendet på LeetCode UI-en, for å bli kjent med Vue.
