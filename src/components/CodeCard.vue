@@ -9,7 +9,7 @@ import 'vue-prism-editor/dist/prismeditor.min.css';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
-import 'prismjs/themes/prism-vsc-dark-plus.css';
+import 'prismjs/themes/prism-okaidia.min.css';
 
 const code = ref('\n//console.log the result\nfunction twoSum(nums, k) {\n\tconsole.log("Hello world");\n}\n');
 
